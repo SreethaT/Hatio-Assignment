@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Todo.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+  
+    <style type="text/css">
+        .style1
+        {
+            width: 95%;
+            font-family: "Times New Roman", Times, serif;
+            font-size: large;
+            margin-left: 26px;
+        }
+        .style2
+        {
+            width: 363px;
+        }
+        .style3
+        {
+            width: 363px;
+            height: 33px;
+        }
+        .style4
+        {
+            height: 33px;
+        }
+        .style5
+        {
+            width: 363px;
+            height: 32px;
+        }
+        .style6
+        {
+            height: 32px;
+        }
+        .style7
+        {
+            font-family: "Times New Roman", Times, serif;
+            font-size: large;
+        }
+    </style>
+  
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    TODO Application
+                </h1>
+            </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="HOME"/>
+                        <asp:MenuItem NavigateUrl="~/newproject.aspx" Text="CREATE NEW PROJECT"/>
+                        <asp:MenuItem NavigateUrl="~/listproject.aspx" Text="LIST ALL PROJECT"/>
+                        <asp:MenuItem NavigateUrl="~/viewproject.aspx" Text="VIEW A PROJECT"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <center><h2>WELCOME</h2>
+                <p>&nbsp;</p></center>
+             <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+                
+             </asp:ContentPlaceHolder>
+        </div>
+        
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
